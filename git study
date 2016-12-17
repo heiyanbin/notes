@@ -1,0 +1,14 @@
+branch:
+delete an alreay merged branch:
+	 git branch -d <branch_name>
+delete an unmerged branch:
+	 git branch -D <branch_name>
+
+remote branch:
+publish a local branch to remote:
+	git branch new_branch
+	git push -u origin new_branch
+
+delete a remote branch:
+suppose the corresponding local branch has been deleted, then run:
+	git push origin :<branch>
