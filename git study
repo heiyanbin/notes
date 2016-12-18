@@ -8,7 +8,13 @@ remote branch:
 publish a local branch to remote:
 	git branch new_branch
 	git push -u origin new_branch
+-u is setting the tracking info(upstream), then next time don't need to specify where to push
 
 delete a remote branch:
 suppose the corresponding local branch has been deleted, then run:
 	git push origin :<branch>
+
+tracking:
+create local and remote branch at the same time
+	git branch --track new_branch origin/new_branch
+
