@@ -19,9 +19,29 @@ create local and remote branch at the same time
 	git branch --track new_branch origin/new_branch
 
 stash:
-the working directory is shared between the branches, use stash to save away thetemp work in a branch and reverting the working directory.
+the working directory is shared between the branches, use stash to save away the temp work in a branch and reverting the working directory.
 	git stash "some description".
+in low git versions, you are not allowd to switch branch unless you stash or revert the index and working directory. 
+in high git version, the change in working directory or index belongs to all branches
 
 later coming back:
 	git stash apply
+	
 
+config file:
+~/.gitconfig: reside in home directory, hold global config
+.git/config: repository specific config
+.gitignore: ignore file, part of the project
+
+
+revert uncommitted change:
+1) unstage : git reset HEAD file
+2) revert in working directory: git checkout -- file (checkout the file into working diretory)
+
+git log:
+	git log --stat
+full diff:
+	git log -p
+	
+pointer:
+HEAD^ HEAD^^ HEAD^^^(HEAD~3)
