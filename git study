@@ -5,6 +5,10 @@ add all untracked files, also deleted files or renamed files
 	git add -A
 	
 branch:
+create a branch based on a specific point:
+	git branch new_branch SHA (or tag)
+rename a branch(move a branch)
+	git branch -m old_banch_name new_branch_name
 delete an alreay merged branch:
 	 git branch -d <branch_name>
 delete an unmerged branch:
@@ -17,8 +21,8 @@ publish a local branch to remote:
 -u is setting the tracking info(upstream), then next time don't need to specify where to push
 
 delete a remote branch:
-suppose the corresponding local branch has been deleted, then run:
-	git push origin :<branch>
+	git push origin : <remote_branch_name>
+left part of the colon should be the local branch name, here empty, meaning deleting the remote branch
 
 tracking:
 create local and remote branch at the same time
@@ -59,6 +63,11 @@ git log:
 	git log --stat
 full diff:
 	git log -p
+git log --oneline
+git log --graph
+git log --oneline | wc -l
+git shortlog: group by contributor
+git shortlog -sn: list contributors sorted by commits desc
 	
 pointer:
 HEAD^ HEAD^^ HEAD^^^(HEAD~3)
