@@ -66,9 +66,11 @@ repository level config， git config
 
 
 ### Revert uncommitted change:
-1. unstage : 
+1. unstage: 
+
 	git reset HEAD file
 2. revert in working directory:(checkout the file into working diretory)
+
 	git checkout -- file (the -- is not needed if the file name does not be the same with any branch name)
 	git reset --hard (revert all changes in working direcotory)	
 3. revert commits
