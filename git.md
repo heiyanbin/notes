@@ -1,6 +1,6 @@
 ### add:
 add all updates, not including untracked file, but include repo file deleted from os
-	
+    
 	git add -u
 add all untracked files, also deleted files or renamed files
 	
@@ -9,8 +9,8 @@ add all untracked files, also deleted files or renamed files
 		
 ### branch:
 create a branch based on a specific point:
-	
-	git branch new_branch SHA (or tag)
+
+    git branch new_branch SHA (or tag)
 	
 	
 rename a branch(move a branch)
@@ -54,11 +54,19 @@ later coming back:
 	
 ### File:
 **Config file:**
-1. /etc/gitconfig: 
-system level, config git config --system
-2. ~/.gitconfig: 
-user level config, git config --global
-3. .git/config: 
+
+- /etc/gitconfig: 
+system level config
+    
+
+    git config --system
+- ~/.gitconfig: 
+user level config
+
+
+    git config --global
+
+- .git/config: 
 repository level config， git config 
 
 **.gitignore:**
@@ -67,19 +75,24 @@ repository level config， git config
 
 ### Revert uncommitted change:
 1. unstage: 
-
-	git reset HEAD file
+```
+    git reset HEAD file
+```
 2. revert in working directory:(checkout the file into working diretory)
-
+```
 	git checkout -- file (the -- is not needed if the file name does not be the same with any branch name)
-	git reset --hard (revert all changes in working direcotory)	
+	
+    git reset --hard (revert all changes in working direcotory)	
+```
 3. revert commits
 revert the last commit and move the change back to the stage
-
-	**git reset --soft HEAD~1**
+```
+	git reset --soft HEAD~1
+```
 revert the last commit and discard the change
-
-	**git reset --hard HEAD~1**
+```
+	git reset --hard HEAD~1
+```
 	
 ### git log:
 	git log --stat
