@@ -72,7 +72,7 @@ repository level config， git config
 	git checkout -- file (the -- is not needed if the file name does not be the same with any branch name)
 	git reset --hard (revert all changes in working direcotory)	
 3. revert commits
->revert the last commit and move the change back to the stage
+revert the last commit and move the change back to the stage
 
 	**git reset --soft HEAD~1**
 revert the last commit and discard the change
