@@ -110,3 +110,8 @@ other:
 	
 ### pointer:
 	HEAD^ HEAD^^ HEAD^^^(HEAD~3)
+
+### squash
+merge from branch1, make the commits in branch1 one change, staged on current branch for commit.
+	git merge branch1 --squash
+
